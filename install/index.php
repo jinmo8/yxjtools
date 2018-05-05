@@ -94,6 +94,7 @@ function curl_get_https($url){
 			//获取表单提交数据
 			$host = isset($_POST['host']) ? $_POST['host'] : '';
 			$user = isset($_POST['user']) ? $_POST['user'] : '';
+			$dk = isset($_POST['dk']) ? $_POST['dk'] : '';
 			$password = isset($_POST['password']) ? $_POST['password'] : '';
 			$database = isset($_POST['database']) ? $_POST['database'] : '';
 			$username = isset($_POST['username']) ? $_POST['username'] : '';
@@ -121,11 +122,11 @@ function curl_get_https($url){
 				$data = "<?php
 				return array(
 					'mysql' => array(
-						'MYSQL_HOST' => '{$_POST['host']}', // 数据库地址
-						'MYSQL_PORT' => '{$_POST['dk']}',      // 数据库端口，一般是3306
-						'MYSQL_USER' => '{$_POST['user']}',      // 数据库用户名
-						'MYSQL_PASS' => '{$_POST['password']}',          // 数据库密码
-						'MYSQL_DB'   => '{$_POST['user']}',      // 数据库库名称
+						'MYSQL_HOST' => '{$host}', // 数据库地址
+						'MYSQL_PORT' => '{$dk}',      // 数据库端口，一般是3306
+						'MYSQL_USER' => '{$user}',      // 数据库用户名
+						'MYSQL_PASS' => '{$password}',          // 数据库密码
+						'MYSQL_DB'   => '{$database}',      // 数据库库名称
 						'MYSQL_CHARSET' => 'utf8',   // 编码，一般utf8即可
 					),
 				);
