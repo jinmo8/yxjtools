@@ -44,7 +44,7 @@ if($tools_settings['ua']){
   }
 }
 
-if ($tools_settings['tz']='1') {
+if ($tools_settings['tz']=='1') {
   if(strpos($_SERVER['HTTP_USER_AGENT'], 'QQ/')!==false){
     $a='http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"]; 
     echo '<!DOCTYPE html>
