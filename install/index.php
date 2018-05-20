@@ -268,11 +268,12 @@ return $password;
 						`username` tinytext NOT NULL,
 						`password` tinytext NOT NULL,
 						`smtp_from` tinytext NOT NULL,
-						`sub` tinytext NOT NULL
+						`sub` tinytext NOT NULL,
+						`add_email` tinytext NOT NULL
 					)  AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
-					INSERT INTO `tools_smtp` (`id`, `host`, `port`, `fromname`, `username`, `password`, `smtp_from`, `sub`) VALUES
-					(1, '', '', '', '', '', '', '收到一条来自xxxxx的回复');
+					INSERT INTO `tools_smtp` (`id`, `host`, `port`, `fromname`, `username`, `password`, `smtp_from`, `sub`,`add_email`) VALUES
+					(1, '', '', '', '', '', '', '收到一条来自xxxxx的回复','');
 
 					CREATE TABLE IF NOT EXISTS `tools_talk` (
 						`name` text NOT NULL,

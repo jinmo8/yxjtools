@@ -39,7 +39,7 @@ if(getParam('domain')=='smtp'){
     "fromname" => getParam('fromname'),
     "username" => getParam('username'),
     "password" => getParam('password'),
-    "smtp_from" => getParam('smtp_from'),
+    "add_email" => getParam('add_email'),
     "sub" => getParam('sub'),
   );
   $state = $setsmtp->update(array("1"),$config);
@@ -379,13 +379,13 @@ if(getParam('domain')=='smtp'){
               </div>
             </div>
             <div class="form-group">
-              <label for="" class="col-sm-3 col-md-3 col-lg-2 control-label">发件人</label>
+              <label for="" class="col-sm-3 col-md-3 col-lg-2 control-label">收件人(请勿与发件人相同)</label>
               <div class="col-sm-9 col-md-9 col-lg-10">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="input-group input-group-sm">
                       <span class="input-group-addon"><i class="fa fa-hdd-o"></i></span>
-                      <input type="text" placeholder="发件人" class="form-control" name="smtp_from" id="smtp_from" value="<?php echo $smtp['smtp_from'];?>">
+                      <input type="text" placeholder="收件人" class="form-control" name="add_email" id="add_email" value="<?php echo $smtp['add_email'];?>">
                     </div>
                   </div>
                 </div>
