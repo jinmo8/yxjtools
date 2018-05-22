@@ -253,12 +253,13 @@ return $password;
 						`search` int(30) NOT NULL,
 						`tools_priority` text NOT NULL,
 						`tz` int(30) NOT NULL,
-						`tz_msg` text NOT NULL
+						`tz_msg` text NOT NULL,
+						`templates` INT NOT NULL
 					)  AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 
-					INSERT INTO `tools_settings` (`id`, `url`, `title`, `keyword`, `description`, `copyright`, `icp`, `footer`, `notice`, `ip_admin`, `ip_vip`, `rand`, `referer`, `ua`, `name`, `qq`, `emails`,`search`,`tools_priority`,`tz`,`tz_msg`) VALUES
-					(1, '{$web_url}', '杨小杰工具箱', '二维码生成,dns解析查询,短网址生成,icp备案查询,ip定位,全民k歌解析,在线ping,端口扫描,子域名扫描,QQ在线状态,在线运行,时间戳转换,ua查询,whois查询,字符加解密', 'YoungxjTools提供二维码生成,dns解析查询,短网址生成,icp备案查询,ip定位,全民k歌解析,在线ping,端口扫描,子域名扫描,QQ在线状态,在线运行,时间戳转换,ua查询,whois查询,字符加解密等优质的小工具,更加方便的使用我们的小工具,便捷站长使用工具', 'Youngxj', '', '', '', '', '127.0.0.255', 'Youngxj', 1, 1, 'YoungxjTools', '1170535111', 'blog@youngxj.cn','2','1','2','<h2>浏览器打开</h2>');
+					INSERT INTO `tools_settings` (`id`, `url`, `title`, `keyword`, `description`, `copyright`, `icp`, `footer`, `notice`, `ip_admin`, `ip_vip`, `rand`, `referer`, `ua`, `name`, `qq`, `emails`,`search`,`tools_priority`,`tz`,`tz_msg`,`templates`) VALUES
+					(1, '{$web_url}', '杨小杰工具箱', '二维码生成,dns解析查询,短网址生成,icp备案查询,ip定位,全民k歌解析,在线ping,端口扫描,子域名扫描,QQ在线状态,在线运行,时间戳转换,ua查询,whois查询,字符加解密', 'YoungxjTools提供二维码生成,dns解析查询,短网址生成,icp备案查询,ip定位,全民k歌解析,在线ping,端口扫描,子域名扫描,QQ在线状态,在线运行,时间戳转换,ua查询,whois查询,字符加解密等优质的小工具,更加方便的使用我们的小工具,便捷站长使用工具', 'Youngxj', '', '', '', '', '127.0.0.255', 'Youngxj', 1, 1, 'YoungxjTools', '1170535111', 'blog@youngxj.cn','2','1','2','<h2>浏览器打开</h2>','0');
 
 					CREATE TABLE IF NOT EXISTS `tools_smtp` (
 						`id` int(6) unsigned NOT NULL,

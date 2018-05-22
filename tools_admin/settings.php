@@ -23,6 +23,7 @@ if(getParam('domain')=='setting'){
     "tools_priority" => getParam('tools_priority'),
     "tz" => getParam('tz'),
     "tz_msg" => getParam('tz_msg'),
+    "templates" => getParam('templates'),
   );
   $state = $sett->update(array(),$config);
   var_dump($state);
@@ -290,6 +291,20 @@ if(getParam('domain')=='smtp'){
                       <span class="input-group-addon"><i class="fa fa-area-chart"></i></span>
                       <input type="text" placeholder="防QQ拦截消息" class="form-control" name="tz_msg" id="tz_msg" value="<?php echo $setting['tz_msg'];?>">
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-sm-3 col-md-3 col-lg-2 control-label">默认主题：</label>
+              <div class="col-sm-9 col-md-9 col-lg-10">
+                <div class="row">
+                  <div class="col-md-6">
+                    <select class="form-control" name="templates" id="templates">
+                      <option value="0" <?php if($setting['templates']!='1'&&$setting['templates']!='2'){echo 'selected="selected"';}?>>默认</option>
+                      <option value="1" <?php if($setting['templates']=='1'){echo 'selected="selected"';}?>>tool.lu样式</option>
+                      <option value="2" <?php if($setting['templates']=='2'){echo 'selected="selected"';}?>>流行样式</option>
+                    </select>
                   </div>
                 </div>
               </div>
