@@ -151,7 +151,7 @@ if($id){
   /*查询工具id相关数据*/
   $as=$sp->find(array("tools_url = '$id'"),"id desc","*");
   $tools_type = $as['tools_type'];
-  $navs = $sp->findall(array("tools_type = '$tools_type'"),"id desc","*");
+  $navs = $sp->findall(array("tools_type" => $tools_type,"state"=>0),"id desc","*");
   $title = $as['title'];
   $keywords = $as['keyword'];
   $subtitle = $as['subtitle'];
