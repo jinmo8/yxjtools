@@ -156,7 +156,6 @@
         padding-bottom: 23px;
         padding-left: 10px;
         list-style-type: none;
-        !important;
     }
 
     .links_lb ul li {
@@ -172,3 +171,4 @@
     .links_lb ul li a:hover {
         color: #5db8f8;
     }
+    a.item-link{min-width:200px;}
